@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Kitchen</title>
+    <!--Tailwind CSS-->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--Broostrap Icon-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!--Font Style Monrope-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <style>
+    @keyframes fadeLoop {
+        0%, 30% { opacity: 1; z-index: 10; }
+        33%, 100% { opacity: 0; z-index: 0; }
+    }
+
+    .animate-fade-1 { animation: fadeLoop 12s infinite; }
+    .animate-fade-2 { animation: fadeLoop 12s infinite 4s; }
+    .animate-fade-3 { animation: fadeLoop 12s infinite 8s; }
+</style>
+</head>
+<body>
+    <!--WhiteBar-->
+    <div class="w-full bg-[#f8f8f7] py-2 border-b border-gray-200">
+    <div class="text-center font-['Manrope'] text-sm tracking-tight text-gray-700">
+        Subscribe to our newsletter - <span class="font-bold">mykitchen@gmail.com</span>
+    </div>
+</div>
+<header class="w-full bg-white py-6 px-6 md:px-20">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center">
+        
+        <div class="flex flex-col items-center">
+            <a href="index.html">
+            <img src="./assets/image/logo.png" alt="My Kitchen Logo" class="w-32 h-auto"></a>
+        </div>
+
+        <div class=" flex items-center gap-4">
+            <input type="text" placeholder="Search" 
+                class="w-48 md:w-64 border-b border-gray-300 py-1 pr-10 outline-none focus:border-red-500 font-['Manrope'] text-sm">
+            <button class=" right-0 bg-red-600 text-white p-2 rounded-[10px] hover:bg-black transition-all">
+                <i class="bi bi-search text-xs"></i>
+            </button>
+        </div>
+
+    </div>
+</header>
+
+<nav class="bg-white border-y border-gray-300 mx-8  py-4 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="flex justify-start items-center h-12 relative">
+            
+            <input type="checkbox" id="menu-toggle" class="peer hidden">
+
+            <label for="menu-toggle" class="lg:hidden text-2xl py-2 cursor-pointer select-none">
+                <i class="bi bi-list"></i>
+            </label>
+
+            <ul class="hidden lg:flex space-x-10 font-['Manrope'] font-bold text-[20px] tracking-widest uppercase items-center">
+                <li><a href="#" class="text-red-600">Home</a></li>
+                <li><a href="recipes.html" class="hover:text-red-600 transition-all">Recipes</a></li>
+                <li><a href="blog.html" class="hover:text-red-600 transition-all">Blog</a></li>
+                <li><a href="about.html" class="hover:text-red-600 transition-all">About Me</a></li>
+            </ul>
+
+            <div class="absolute top-12 left-0 w-full bg-white border-t border-gray-100 p-4 flex-col space-y-4 font-['Manrope'] font-bold uppercase text-lg text-center shadow-md 
+                hidden peer-checked:flex lg:peer-checked:hidden">
+                <a href="#" class="text-red-600">Home</a>
+                <a href="recipes.html" class="hover:text-red-600">Recipes</a>
+                <a href="blog.html" class="hover:text-red-600">Blog</a>
+                <a href="about.html" class="hover:text-red-600">About Me</a>
+            </div>
+            
+        </div>
+    </div>
+</nav>
+
+<section class="max-w-7xl mx-auto px-6 py-10 font-['Manrope']">
+    <div class="relative w-full overflow-hidden rounded-[40px] shadow-2xl group">
+        
+        <img src="./assets/image/hero image.png" alt="Hero Banner" 
+            class="w-full h-[500px] md:h-[600px] object-cover transition-transform duration-700 group-hover:scale-110">
+
+        <div class="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-all duration-500"></div>
+
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-6 md:px-20 space-y-6">
+            
+            <h1 class="text-4xl md:text-6xl font-extrabold text-[#e3342f] drop-shadow-md">
+                Sharing my love for food
+            </h1>
+
+            <div class="max-w-3xl space-y-4 text-gray-900 font-medium leading-relaxed">
+                <p class="text-lg md:text-xl drop-shadow-sm">
+                    I'm excited to share my passion for all things culinary. Food is not just about nourishment: it's an experience that brings people together, evokes memories, and sparks creativity.
+                </p>
+            </div>
+
+            <div class="pt-4">
+                <button class="bg-[#e3342f] text-white flex items-center gap-3 px-10 py-4 rounded-full font-bold uppercase tracking-widest text-sm hover:bg-black transition-all duration-300 shadow-xl">
+                    Get in Touch
+                    <i class="bi bi-send-fill"></i>
+                </button>
+            </div>
+
+        </div>
+    </div>
+</section>
+  <section class="max-w-7xl mx-auto px-6 py-16 font-['Manrope']">
+    <div class="relative w-full  h-[1050px] md:h-[600px]">
+        
+        <div class="absolute inset-0 grid grid-cols-1 md:grid-cols-2 gap-8 animate-fade-1">
+            <a href="chickenspinach.html">
+            <div class="space-y-4">
+                <img src="./assets/image/bites.png" class="w-full h-[450px] object-cover transition-transform duration-700  hover:scale-110 cursor-pointer">
+                <p class="text-[#e3342f] font-bold uppercase text-[18px] tracking-widest">Bites</p>
+                <h3 class="text-xl font-bold text-gray-900">Stuffed Mini Peppers</h3>
+            </div></a>
+            <a href="chickenspinach.html">
+            <div class="space-y-4">
+                <img src="./assets/image/side dish.png" class="w-full h-[450px] object-cover rounded-sm  transition-transform duration-700 hover:scale-110 cursor-pointer">
+                <p class="text-[#e3342f] font-bold uppercase text-[18px] tracking-widest">Side Dish</p>
+                <h3 class="text-xl font-bold text-gray-900">Garlic Mashed Potatoes</h3>
+            </div></a>
+            </div>
+
+        <div class="absolute inset-0 grid grid-cols-1 md:grid-cols-2 gap-8 animate-fade-2 opacity-0">
+            <a href="chickenspinach.html">
+            <div class="space-y-4">
+                <img src="./assets/image/starter.png" class="w-full h-[450px] object-cover rounded-sm  transition-transform duration-700 hover:scale-110 cursor-pointer">
+                <p class="text-[#e3342f] font-bold uppercase text-[18px] tracking-widest">Starter</p>
+                <h3 class="text-xl font-bold text-gray-900">Caprese Salad Skewers</h3>
+            </div></a>
+            <a href="">
+            <div class="space-y-4">
+            
+                <img src="./assets/image/mani course.png" class="w-full h-[450px] object-cover rounded-sm transform transition-transform duration-700 ease-in-out hover:scale-110 cursor-pointer">
+                <p class="text-[#e3342f] font-bold uppercase text-[18px] tracking-widest">Main Course</p>
+                <h3 class="text-xl font-bold text-gray-900">Grilled Lemon Herb Chicken</h3>
+            </div></a>
+        </div>
+
+        <div class="absolute inset-0 grid grid-cols-1 md:grid-cols-2 gap-8 animate-fade-3 opacity-0 ">
+            <a href="chickenspinach.html">
+            <div class="space-y-4">
+                <img src="./assets/image/dessert.png" class="w-full h-[450px] object-cover rounded-sm transform transition-transform duration-700 ease-in-out hover:scale-110 cursor-pointer ">
+                <p class="text-[#e3342f] font-bold uppercase text-[18px] tracking-widest">Dessert</p>
+                <h3 class="text-xl font-bold text-gray-900">Chocolate Mousse</h3>
+            </div></a>
+            <a href="#">
+            <div class="space-y-4">
+                <img src="./assets/image/platter.png" class="w-full h-[450px] object-cover rounded-sm transform transition-transform duration-700 ease-in-out hover:scale-110 cursor-pointer">
+                <p class="text-[#e3342f] font-bold uppercase text-[18px] tracking-widest">Platter</p>
+                <h3 class="text-xl font-bold text-gray-900">Sea Food Platter</h3>
+            </div></a>
+        </div>
+    </div>
+</section>
+  <section class="w-full bg-white py-12 px-4 font-['Manrope'] clear-both">
+    
+    <div class="max-w-7xl mx-auto border-2 border-[#e3342f] p-6 md:p-16 bg-white relative">
+        
+        <div class="flex flex-col lg:flex-row items-center justify-between gap-10">
+            
+            <div class="w-full lg:w-1/2 text-center lg:text-left">
+                <p class="text-[#e3342f] font-semibold text-sm mb-1">New recipes</p>
+                <h2 class="text-3xl md:text-5xl font-extrabold text-[#e3342f] leading-tight">
+                    Straight to your inbox
+                </h2>
+            </div>
+
+            <div class="w-full lg:w-1/2 flex flex-col md:flex-row gap-8 items-end">
+                
+                <div class="w-full">
+                    <input type="text" placeholder="Enter your name" 
+                        class="w-full bg-transparent border-b border-[#e3342f] py-2 outline-none placeholder:text-[#e3342f]/60 text-[#e3342f]">
+                </div>
+
+                <div class="w-full relative">
+                    <input type="email" placeholder="Enter your email address " 
+                        class="w-full bg-transparent border-b border-[#e3342f] py-2 pr-10 outline-none placeholder:text-[#e3342f]/60 text-[#e3342f]">
+                    
+                    <button class="absolute right-0 bottom-2 text-[#e3342f]">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+ 
+ <section class="max-w-7xl mx-auto px-6 py-16 font-['Manrope']">
+    
+    <div class="flex justify-between items-center mb-10">
+        <h2 class="text-4xl font-extrabold text-black">Latest Recipes</h2>
+        <a href="recipes.html" class="bg-[#e3342f] text-white px-6 py-2 rounded-lg font-bold text-xl flex items-center gap-2 hover:bg-black transition-all">
+            View All 
+            <i class="bi bi-arrow-right"></i>
+        </a>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <a href="chickenspinach.html" class="group block bg-white rounded-3xl shadow-sm hover:shadow-xl transition-all border border-gray-100 overflow-hidden">
+            <div class="overflow-hidden h-64">
+                <img src="./assets/image/latest recipes 1.png" alt="Chickpea Salad" 
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            </div>
+            <div class="p-6 text-center">
+                <h3 class=" text-2xl text-gray-800 group-hover:text-[#e3342f] transition-colors">
+                    Chickpea and sprouts salad
+                </h3>
+            </div>
+        </a>
+
+        <a href="fugy.html" class="group block bg-white rounded-3xl shadow-sm hover:shadow-xl transition-all border border-gray-100 overflow-hidden">
+            <div class="overflow-hidden h-64">
+                <img src="./assets/image/latest recipes 2.png" alt="Chocolate Mousse" 
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            </div>
+            <div class="p-6 text-center">
+                <h3 class="text-2xl text-gray-800 group-hover:text-[#e3342f] transition-colors">
+                    High protein chocolate mousse
+                </h3>
+            </div>
+        </a>
+
+        <a href="mutton.html" class="group block bg-white rounded-3xl shadow-sm hover:shadow-xl transition-all border border-gray-100 overflow-hidden">
+            <div class="overflow-hidden h-64">
+                <img src="./assets/image/latest recipes 3.png" alt="Lamb Chops" 
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            </div>
+            <div class="p-6 text-center">
+                <h3 class="text-2xl text-gray-800 group-hover:text-[#e3342f] transition-colors">
+                    Big mac lamb chops and veggies
+                </h3>
+            </div>
+        </a>
+
+        <a href="apple.html" class="group block bg-white rounded-3xl shadow-sm hover:shadow-xl transition-all border border-gray-100 overflow-hidden">
+            <div class="overflow-hidden h-64">
+                <img src="./assets/image/latest recipes 4.png" alt="Apple Crumble" 
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            </div>
+            <div class="p-6 text-center">
+                <h3 class="text-2xl text-gray-800 group-hover:text-[#e3342f] transition-colors">
+                    Healthy apple crumble
+                </h3>
+            </div>
+        </a>
+
+    </div>
+</section>
+     <section class="w-full bg-[#e3342f] py-16 px-6 font-['Manrope']">
+    <div class="max-w-7xl mx-auto">
+        
+        <div class="border border-white/100 p-8 md:p-14 flex flex-col md:flex-row items-center relative min-h-[100px]">
+            
+            <div class="flex-1 flex flex-col items-center text-center text-white gap-y-4">
+                <h2 class="text-5xl md:text-5xl font-medium tracking-tight">
+                    Hello there! I am Tiffy.
+                </h2>
+                <p class="text-3xl md:text-3xl font-light opacity-90">
+                    Start cooking with me
+                </p>
+                
+                <div class="flex justify-center gap-6 py-4">
+                    <a href="#" class="text-3xl hover:opacity-75 transition-opacity"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="text-3xl hover:opacity-75 transition-opacity"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="text-3xl hover:opacity-75 transition-opacity"><i class="bi bi-youtube"></i></a>
+                </div>
+
+                <div class="pt-2">
+                    <a href="#" class="uppercase tracking-[0.3em] text-xl font-bold border-b-2 border-white pb-1 hover:text-black hover:border-black transition-all">
+                        VIEW MORE
+                    </a>
+                </div>
+            </div>
+
+            <div class="mt-10 md:mt-0 md:ml-auto">
+                <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-2xl transition-transform duration-500 hover:scale-105">
+                    <img src="./assets/image/profile.png" alt="Tiffy Profile" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <section class="max-w-7xl mx-auto px-6 py-16 font-['Manrope']">
+    
+    <div class="flex flex-wrap justify-between items-center mb-10">
+        <h2 class="text-4xl font-extrabold text-black">Readers Favourites</h2>
+        <a href="blog.html" class="bg-[#e3342f] text-white px-6 py-2 rounded-lg font-bold text-xl flex items-center gap-2 hover:bg-black transition-all">
+            View All 
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+            </svg>
+            
+        </a>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <a href="chickenspinach.html" class="group block bg-white rounded-[40px] shadow-md hover:shadow-2xl transition-all border border-gray-100 overflow-hidden">
+            <div class="overflow-hidden h-[380px]"> <img src="./assets/image/try this 1.png" alt="Meal Prep" 
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            </div>
+            <div class="p-8 text-center bg-white">
+                <h3 class="text-2xl text-gray-800 text-lg leading-snug group-hover:text-[#e3342f] transition-colors">
+                    Time saving meal prep
+                </h3>
+            </div>
+        </a>
+        <a href="one pot.html" class="group block bg-white rounded-[40px] shadow-md hover:shadow-2xl transition-all border border-gray-100 overflow-hidden">
+            <div class="overflow-hidden h-[380px]">
+                <img src="./assets/image/try this 2.png" alt="Toddler Food" 
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            </div>
+            <div class="p-8 text-center bg-white">
+                <h3 class="text-2xl text-gray-800 text-lg leading-snug group-hover:text-[#e3342f] transition-colors">
+                    Toddler -friendly foods
+                </h3>
+            </div>
+        </a>
+
+        <a href="mutton.html" class="group block bg-white rounded-[40px] shadow-md hover:shadow-2xl transition-all border border-gray-100 overflow-hidden">
+            <div class="overflow-hidden h-[380px]">
+                <img src="./assets/image/recipe index 3.png" alt="Vegan Recipes" 
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            </div>
+            <div class="p-8 text-center bg-white">
+                <h3 class="text-2xl text-gray-800 text-lg leading-snug group-hover:text-[#e3342f] transition-colors">
+                    10-must try vegan recipes
+                </h3>
+            </div>
+        </a>
+
+        <a href="chickenspinach.html" class="group block bg-white rounded-[40px] shadow-md hover:shadow-2xl transition-all border border-gray-100 overflow-hidden">
+            <div class="overflow-hidden h-[380px]">
+                <img src="./assets/image/recipe index 4.png" alt="Canning Methods" 
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            </div>
+            <div class="p-8 text-center bg-white">
+                <h3 class="text-2xl text-gray-800 text-lg leading-snug group-hover:text-[#e3342f] transition-colors">
+                    Canning and preserving methods
+                </h3>
+            </div>
+        </a>
+    </div>
+</section>
+      <section class="max-w-7xl mx-auto px-6 py-20 font-['Manrope']">
+        <div class="relative border-2 border-[#e3342f]  p-6  md:p-20 overflow-hidden bg-white">
+        
+             <div class="relative z-10 max-w-2xl mx-auto text-center ">
+            
+                 <div class="space-y-4">
+                     <h2 class="text-[#e3342f] text-3xl md:text-5xl  font-extrabold">
+                    Our Newsletter
+                </h2>
+                <p class="text-gray-800 text-xl md:text-lg font-medium leading-relaxed">
+                    Subscribe to our newsletter & keep up with our latest recipes and organized workshops.
+                </p>
+            </div>
+
+            <div class="relative max-w-md mx-auto pt-4">
+                <input type="email" placeholder="Enter your email address " 
+                    class="w-full bg-transparent border-b border-gray-400 py-3 pr-12 outline-none placeholder:text-gray-400 text-gray-800 font-bold focus:border-[#e3342f] transition-colors">
+                
+                <button class="absolute right-0 bottom-3 text-black hover:text-[#e3342f] transition-all">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+    <section class="max-w-7xl mx-auto px-6 py-16 font-['Manrope']">
+    
+    <div class="text-center mb-12 space-y-2">
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 leading-tight">
+            Share Your Meals On With Instagram With <span class="text-[#e3342f]">#mykitchen</span>
+        </h2>
+        <p class="text-2xl md:text-3xl font-bold text-gray-900">
+            & We Will Reward The Meal Of The Month!
+        </p>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+        
+        <div class="overflow-hidden rounded-xl aspect-square shadow-sm">
+            <img src="./assets/image/insta 1.png" alt="Pancakes" 
+                class="w-full h-full object-cover hover:scale-110 transition-transform duration-500 cursor-pointer">
+        </div>
+
+        <div class="overflow-hidden rounded-xl aspect-square shadow-sm">
+            <img src="./assets/image/insta 2.png" alt="Burger" 
+                class="w-full h-full object-cover hover:scale-110 transition-transform duration-500 cursor-pointer">
+        </div>
+
+        <div class="overflow-hidden rounded-xl aspect-square shadow-sm">
+            <img src="./assets/image/insta 3.png" alt="Salmon" 
+                class="w-full h-full object-cover hover:scale-110 transition-transform duration-500 cursor-pointer">
+        </div>
+
+        <div class="overflow-hidden rounded-xl aspect-square shadow-sm">
+            <img src="./assets/image/insta 4.png" alt="Cake" 
+                class="w-full h-full object-cover hover:scale-110 transition-transform duration-500 cursor-pointer">
+        </div>
+
+        <div class="overflow-hidden rounded-xl aspect-square shadow-sm">
+            <img src="./assets/image/insta 5.png" alt="Fries" 
+                class="w-full h-full object-cover hover:scale-110 transition-transform duration-500 cursor-pointer">
+        </div>
+    </div>
+     </section>
+      <footer class="relative w-full py-16 px-6 font-['Manrope'] overflow-hidden bg-white">
+    
+    <div class="absolute inset-0 opacity-20 pointer-events-none" 
+         style="background-image: radial-gradient(#363b43 2px, transparent 2px); background-size: 30px 30px;">
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto flex flex-col items-center text-center">
+        
+        <div class="mb-6">
+            <img src="./assets/image/logo.png" alt="My Kitchen Logo" class="h-16 md:h-20 object-contain">
+        </div>
+
+        <p class="text-xl font-semibold text-gray-800 mb-8 italic">Healthy recipes for busy people</p>
+
+        <div class="flex gap-6 mb-10">
+            <a href="#" class="text-[#e3342f] text-2xl hover:scale-110 transition-transform"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="text-[#e3342f] text-2xl hover:scale-110 transition-transform"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-[#e3342f] text-2xl hover:scale-110 transition-transform"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-[#e3342f] text-2xl hover:scale-110 transition-transform"><i class="bi bi-youtube"></i></a>
+            <a href="#" class="text-[#e3342f] text-2xl hover:scale-110 transition-transform"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="text-[#e3342f] text-2xl hover:scale-110 transition-transform"><i class="bi bi-tiktok"></i></a>
+        </div>
+
+        <div class="w-full max-w-md relative mb-4">
+            <input type="email" placeholder="Enter your email address here" 
+                class="w-full bg-transparent border-b border-gray-400 py-2 pr-10 outline-none text-center focus:border-[#e3342f] transition-colors">
+            <button class="absolute right-0 bottom-2 text-black hover:text-[#e3342f]">
+                <i class="bi bi-send-fill"></i>
+            </button>
+        </div>
+        <p class="text-sm text-gray-500 mb-16">*Be informed about the latest recipes and workshops</p>
+
+        <div class="w-full flex flex-col md:flex-row justify-between items-center pt-8 border-t border-gray-100">
+            <a href="privacy.html" class="text-lg font-bold text-gray-800 hover:text-[#e3342f] transition-colors">Privacy Policy</a>
+            <p class="text-lg font-bold text-gray-800 mt-4 md:mt-0">copyrights 2022 © my kitchen</p>
+        </div>
+
+    </div>
+</footer>
+</body>
+</html>
